@@ -21,7 +21,11 @@ class CreateTransactionService {
       throw new Error('You do not have enough money');
     }
 
-    const transaction = this.transactionsRepository.create({ title, value, type });
+    const transaction = this.transactionsRepository.create({
+      title,
+      value,
+      type,
+    });
     return transaction;
   }
 }
